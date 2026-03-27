@@ -210,3 +210,8 @@ __marimo__/
 /data/
 /processed_cwt/
 /processed_cwt_windows/
+/models/
+get-docker.sh
+workspace.code-workspace
+devcontainer.json
+settings.json
