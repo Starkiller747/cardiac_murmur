@@ -3,15 +3,20 @@ name = "cardiac-murmur"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "==3.12.*"
 dependencies = [
     "fpdf>=1.7.2",
     "librosa>=0.11.0",
     "matplotlib>=3.10.8",
-    "numpy>=2.4.3",
-    "opencv-python-headless>=4.13.0.92",
+    "numpy<2",
+    "opencv-python-headless>=4.11.0.86",
     "pywavelets>=1.9.0",
     "scikit-learn>=1.8.0",
     "streamlit>=1.55.0",
     "tensorflow>=2.21.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
 ]
