@@ -7,6 +7,72 @@ import pywt
 import cv2
 import joblib
 from sklearn.preprocessing import MinMaxScaler
+from fpdf import FPDF
+import tempfile
+import os
+
+def create_pdf_report(patient_info, overall_verdict, valve_results):
+    pdf = FPDF()
+    pdf.add_page()
+    
+    # --- HEADER ---
+    pdf.set_font("Arial", 'B', 16)
+    pdf.cell(0, 10, txt="AI Cardiac Murmur Diagnostic Report", ln=True, align='C')
+    pdf.line(10, 20, 200, 20)
+    pdf.ln(10)
+    
+    # --- CLINICAL METADATA ---
+    pdf.set_font("Arial", 'B', 12)
+    pdf.cell(0, 8, txt="Patient Clinical Data:", ln=True)
+    pdf.set_font("Arial", '', 11)
+    for key, value in patient_info.items():
+        pdf.cell(0, 6, txt=f"{key}: {value}", ln=True)
+    pdf.ln(5)
+    
+    # --- OVERALL VERDICT ---
+    pdf.set_font("Arial", 'B', 14)
+    if "Refer" in overall_verdict:
+        pdf.set_text_color(200, 0, 0) # Red for Alert
+    else:
+        pdf.set_text_color(0, 128, 0) # Green for Normal
+        
+    pdf.cell(0, 10, txt=f"OVERALL DIAGNOSIS: {overall_verdict}", ln=True)
+    pdf.set_text_color(0, 0, 0) # Reset to Black
+    pdf.line(10, pdf.get_y(), 200, pdf.get_y())
+    pdf.ln(10)
+    
+    # --- VALVE BREAKDOWN ---
+    for result in valve_results:
+        # Check if we need a page break so images don't get cut off
+        if pdf.get_y() > 200: 
+            pdf.add_page()
+            
+        pdf.set_font("Arial", 'B', 12)
+        pdf.cell(0, 10, txt=f"Auscultation Location: {result['valve']} Valve", ln=True)
+        pdf.set_font("Arial", '', 11)
+        pdf.cell(0, 6, txt=f"AI Confidence Score: {result['prob']*100:.1f}%", ln=True)
+        pdf.ln(2)
+        
+        # Insert the waveform and CWT images
+        pdf.image(result['wave_img'], w=170)
+        pdf.image(result['cwt_img'], w=170)
+        pdf.ln(5)
+        
+    # --- EXPORT TO BYTES ---
+    # We save to a temporary file, read the binary data, and delete it.
+    # This prevents byte-encoding errors between FPDF and Streamlit.
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_pdf:
+        pdf.output(tmp_pdf.name)
+        with open(tmp_pdf.name, "rb") as f:
+            pdf_bytes = f.read()
+            
+    # Cleanup temp images
+    for result in valve_results:
+        if os.path.exists(result['wave_img']): os.remove(result['wave_img'])
+        if os.path.exists(result['cwt_img']): os.remove(result['cwt_img'])
+            
+    return pdf_bytes
+
 
 # --- 1. CONFIGURATION & CACHING ---
 st.set_page_config(page_title="Cardiac Murmur Detection", layout="wide")
@@ -67,8 +133,8 @@ age_input = st.sidebar.selectbox(
 )
 sex_input = st.sidebar.selectbox("Sex", ["Male", "Female"])
 sex = 1 if sex_input == "Female" else 0
-height = st.sidebar.number_input("Height (cm)", value=170.0)
-weight = st.sidebar.number_input("Weight (kg)", value=70.0)
+height = st.sidebar.number_input("Height (cm)", value=100.0)
+weight = st.sidebar.number_input("Weight (kg)", value=35.0)
 pregnant_input = st.sidebar.checkbox("Pregnant?")
 pregnant = 1 if pregnant_input else 0
 
@@ -84,35 +150,30 @@ weight_scaled = scaled_hw[0][1]
 
 # --- 3. MAIN DASHBOARD ---
 st.title("🫀 AI Cardiac Murmur Detection Report")
-st.write("Upload the patient's ECG/Auscultation audio files below. (Ensure filenames contain the valve, e.g., 'patient_AV.wav')")
+st.write("Upload the patient's ECG/Auscultation audio files below.")
 
-# NEW: Allow multiple files to be uploaded!
 uploaded_files = st.file_uploader("Choose .wav files", type=['wav'], accept_multiple_files=True)
 
 if uploaded_files:
     st.divider()
     st.subheader("📋 Comprehensive Diagnostic Report")
     
-    # We will track the highest probability across ALL uploaded files
     patient_max_prob = 0.0
+    valve_results_for_pdf = [] # NEW: We will store our charts here!
     
-    # Loop through every file the doctor uploaded
     for uploaded_file in uploaded_files:
         filename = uploaded_file.name
         
-        # 1. Deduce the valve from the filename (Fallback to AV if it can't find one)
         valve_AV, valve_MV, valve_PV, valve_TV = 0, 0, 0, 0
         if "MV" in filename.upper(): valve_MV = 1
         elif "PV" in filename.upper(): valve_PV = 1
         elif "TV" in filename.upper(): valve_TV = 1
-        else: valve_AV = 1 # Default
+        else: valve_AV = 1
         
         valve_name = "Mitral" if valve_MV else "Pulmonary" if valve_PV else "Tricuspid" if valve_TV else "Aortic"
         
-        # 2. Create the Clinical Array strictly for THIS specific file
         clinical_features = np.array([[age_encoded, sex, height_scaled, weight_scaled, pregnant, valve_AV, valve_MV, valve_PV, valve_TV]], dtype=np.float32)
 
-        # 3. Process the Audio
         uploaded_file.seek(0)
         y, sr = librosa.load(uploaded_file, sr=8000)
         clips = slice_audio_windows(y, sr=sr)
@@ -127,56 +188,87 @@ if uploaded_files:
         X_audio = np.array(X_audio_windows, dtype=np.float32)
         X_clinical = np.repeat(clinical_features, len(X_audio), axis=0)
         
-        # 4. Predict
         predictions = model.predict({"audio_input": X_audio, "clinical_input": X_clinical})
         
         OPTIMAL_THRESHOLD = 0.5623
         max_prob_index = np.argmax(predictions)
         max_prob = predictions[max_prob_index][0]
         
-        # Track the highest probability overall for the final patient diagnosis
         if max_prob > patient_max_prob:
             patient_max_prob = max_prob
             
         is_abnormal = max_prob > OPTIMAL_THRESHOLD
         
-        # --- UI DISPLAY FOR THIS SPECIFIC FILE ---
-        # Use an expander so the UI doesn't get cluttered if they upload 4+ files
         with st.expander(f"🩺 Analysis: {valve_name} Valve ({filename})", expanded=is_abnormal):
-            col1, col2 = st.columns([1, 2]) # Make the chart column slightly wider
+            col1, col2 = st.columns([1, 2])
             
             with col1:
-                if is_abnormal:
-                    st.error(f"⚠️ **Alert:** Murmur detected at {valve_name} valve.")
-                else:
-                    st.success(f"✅ **Clear:** No murmur detected here.")
-                    
+                if is_abnormal: st.error(f"⚠️ **Alert:** Murmur detected.")
+                else: st.success(f"✅ **Clear:** No murmur detected.")
                 st.metric(label="Peak Window Confidence", value=f"{max_prob*100:.1f}%")
                 
             with col2:
-                # Use tabs to cleanly separate the Waveform and the Spectrogram
                 tab1, tab2 = st.tabs(["Raw Waveform", "AI Spectrogram (CWT)"])
                 
-                with tab1:
-                    fig_wave, ax_wave = plt.subplots(figsize=(6, 2))
-                    ax_wave.plot(y, color='#1f77b4', linewidth=0.5)
-                    ax_wave.set_axis_off()
-                    st.pyplot(fig_wave)
-                    plt.close(fig_wave) # Prevent memory leaks!
+                # Plot and SAVE the Waveform
+                fig_wave, ax_wave = plt.subplots(figsize=(6, 2))
+                ax_wave.plot(y, color='#1f77b4', linewidth=0.5)
+                ax_wave.set_axis_off()
+                
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmp_wave:
+                    fig_wave.savefig(tmp_wave.name, bbox_inches='tight')
+                    wave_path = tmp_wave.name
                     
-                with tab2:
-                    suspicious_cwt = X_audio[max_prob_index][:, :, 0]
-                    fig_cwt, ax_cwt = plt.subplots(figsize=(6, 2))
-                    cax = ax_cwt.imshow(suspicious_cwt, aspect='auto', cmap='jet', origin='lower')
-                    ax_cwt.set_axis_off()
-                    st.pyplot(fig_cwt)
-                    plt.close(fig_cwt)
+                with tab1: st.pyplot(fig_wave)
+                plt.close(fig_wave)
+                
+                # Plot and SAVE the CWT
+                suspicious_cwt = X_audio[max_prob_index][:, :, 0]
+                fig_cwt, ax_cwt = plt.subplots(figsize=(6, 2))
+                cax = ax_cwt.imshow(suspicious_cwt, aspect='auto', cmap='jet', origin='lower')
+                ax_cwt.set_axis_off()
+                
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmp_cwt:
+                    fig_cwt.savefig(tmp_cwt.name, bbox_inches='tight')
+                    cwt_path = tmp_cwt.name
+                    
+                with tab2: st.pyplot(fig_cwt)
+                plt.close(fig_cwt)
+                
+        # Append data for this valve to our PDF list
+        valve_results_for_pdf.append({
+            'valve': valve_name,
+            'prob': max_prob,
+            'wave_img': wave_path,
+            'cwt_img': cwt_path
+        })
 
-    # --- FINAL PATIENT VERDICT ---
+    # --- FINAL PATIENT VERDICT & PDF GENERATION ---
     st.divider()
+    
     if patient_max_prob > OPTIMAL_THRESHOLD:
-        st.error(f"### 🚨 OVERALL DIAGNOSIS: Refer to Cardiologist")
-        st.write(f"The model found strong evidence of a malignant murmur across the uploaded recordings. (Peak Confidence: {patient_max_prob*100:.1f}%)")
+        verdict_text = "Refer to Cardiologist (Potential Malignant Murmur)"
+        st.error(f"### 🚨 OVERALL DIAGNOSIS: {verdict_text}")
     else:
-        st.success(f"### 🟢 OVERALL DIAGNOSIS: Normal")
-        st.write("The model did not find sufficient evidence of a malignant murmur in any of the uploaded recordings.")
+        verdict_text = "Normal (No Evidence of Malignant Murmur)"
+        st.success(f"### 🟢 OVERALL DIAGNOSIS: {verdict_text}")
+        
+    # Package the dictionary of patient data to pass to the PDF
+    patient_metadata = {
+        "Age Group": age_input,
+        "Sex": sex_input,
+        "Height": f"{height} cm",
+        "Weight": f"{weight} kg",
+        "Pregnant": "Yes" if pregnant_input else "No"
+    }
+
+    # Generate the PDF bytes in the background
+    pdf_bytes = create_pdf_report(patient_metadata, verdict_text, valve_results_for_pdf)
+    
+    # Render the Download Button
+    st.download_button(
+        label="📄 Download Formal PDF Report",
+        data=pdf_bytes,
+        file_name="Cardiac_Murmur_Report.pdf",
+        mime="application/pdf"
+    )
