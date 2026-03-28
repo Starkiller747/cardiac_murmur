@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1774729723.26432 "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" "Main.pdf" "Main" 1774729724.37417 0
+["pdflatex"] 1774739927.69376 "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" "Main.pdf" "Main" 1774739928.77977 0
   "/etc/texmf/web2c/texmf.cnf" 1771347081.47233 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" 1774729721.95655 12798 0e4f4d0a1f0fab06da2b62a648a39876 ""
+  "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" 1774739927.52029 15981 63b1e6691eda450a6a8d3cf74837ba02 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -92,11 +92,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771347095.34065 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771347139 8215375 fce2cac7a29830879dd8528d8efb1914 ""
-  "Main.aux" 1774729724.33661 3204 87bc4b29c7ade84473e247c70f4181f6 "pdflatex"
-  "Main.out" 1774729724.33661 2577 2dcd359b84e6001a51576ccbd538c456 "pdflatex"
-  "Main.tex" 1774729721.95655 12798 0e4f4d0a1f0fab06da2b62a648a39876 ""
-  "Main.toc" 1774729724.33661 1154 d7e433157549b4e30481af9068c2e003 "pdflatex"
+  "Main.aux" 1774739928.74132 3909 414e41827ddff5d063760dff5d0f85b2 "pdflatex"
+  "Main.out" 1774739928.74232 3231 e83543b814376dd92d24044722c4e45e "pdflatex"
+  "Main.tex" 1774739927.52029 15981 63b1e6691eda450a6a8d3cf74837ba02 ""
+  "Main.toc" 1774739928.74232 1491 4715b515015ecac3e304bfa4d7fe070e "pdflatex"
   "images/LOGO-UNAM-269x300.png" 1764792014.39258 88409 1718a144c2f82cae97fb88ca5594f9c4 ""
+  "images/age_distribution.png" 1774726969.23983 17387 dc90c1977c02dd7e28cab8f9b06fab34 ""
   "images/class_distribution.png" 1774726587.85144 72171 fbc7818f1685891d8b0a2bb97c2d387a ""
   "images/confusion_matrix.png" 1774726589.14547 86990 fd7f24d2e23368855768b58527fc8026 ""
   "images/cwt_transformation.png" 1774726591.97254 274872 9ed9c645d40172f77e8ff96383d3a7be ""
