@@ -166,6 +166,20 @@ The metrics display a highly calibrated model. The balanced sensitivity and spec
 \subsection{Deployment and Clinical Integration}
 To truly resolve the problem, the model was packaged into an interactive clinical dashboard using \texttt{Streamlit}. Physicians can upload multiple audio files simultaneously. The system processes the audio, applies the mathematical scaling to clinical inputs, and generates a fully formatted PDF report detailing the AI's confidence levels and plotting the exact spectrogram windows that triggered anomalies. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{streamlit_home.png}
+    \caption{Left: Streamlit interface when opened.}
+\end{figure}
+
+To test the model, some data from the test set was taken and given to the model in order to verify its results:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{streamlit_result.png}
+    \caption{The model finds high chance of a malignant murmur.}
+\end{figure}
+
 % --- Section 7: Conclusions ---
 \section{Conclusions}
 This project successfully designed, trained, and deployed a leakage-free, multi-modal Deep Learning framework capable of detecting malignant heart murmurs with an accuracy approaching 70\% and an AUC of 0.76. 

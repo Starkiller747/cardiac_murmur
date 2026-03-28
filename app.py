@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 import librosa
 import tensorflow as tf
 import matplotlib.pyplot as plt
@@ -142,8 +143,8 @@ age_mapping = {'Neonate': 0, 'Infant': 1, 'Child': 2, 'Adolescent': 3, 'Adult': 
 
 age_encoded = age_mapping[age_input]
 
-raw_hw = np.array([[height, weight]])
-scaled_hw = scaler.transform(raw_hw)
+raw_hw_df = pd.DataFrame([[height, weight]], columns=['Height', 'Weight'])
+scaled_hw = scaler.transform(raw_hw_df)
 height_scaled = scaled_hw[0][0]
 weight_scaled = scaled_hw[0][1]
 
@@ -151,6 +152,10 @@ weight_scaled = scaled_hw[0][1]
 # --- 3. MAIN DASHBOARD ---
 st.title("🫀 AI Cardiac Murmur Detection Report")
 st.write("Upload the patient's ECG/Auscultation audio files below.")
+
+st.warning("Make sure to fill the data from the sidebar first before uploading the audio files.")
+
+st.info("For the audio files, make sure they have the valve type in the name like test_AV for the Atrioventricular, TV for the Tricuspid Valve, MV for Mitral Valve and PV for Pulmonary Valve.")
 
 uploaded_files = st.file_uploader("Choose .wav files", type=['wav'], accept_multiple_files=True)
 
