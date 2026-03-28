@@ -81,11 +81,11 @@ st.set_page_config(page_title="Cardiac Murmur Detection", layout="wide")
 @st.cache_resource
 def load_trained_model():
     # Caching prevents Streamlit from reloading the heavy model on every button click
-    return tf.keras.models.load_model('murmur_fusion_model.keras')
+    return tf.keras.models.load_model('model_data/murmur_fusion_model.keras')
 
 @st.cache_resource
 def load_scaler():
-    return joblib.load('hw_scaler.pkl')
+    return joblib.load('model_data/hw_scaler.pkl')
 
 
 def slice_audio_windows(y, sr=8000, window_sec=3.0, hop_sec=1.5):
