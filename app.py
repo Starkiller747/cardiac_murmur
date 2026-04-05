@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import librosa
 import tensorflow as tf
+import tf_keras as legacy_keras
 import matplotlib.pyplot as plt
 import pywt
 import cv2
@@ -82,10 +83,9 @@ st.set_page_config(page_title="Cardiac Murmur Detection", layout="wide")
 @st.cache_resource
 def load_trained_model():
     # Caching prevents Streamlit from reloading the heavy model on every button click
-    return tf.keras.models.load_model(
+    return legacy_keras.models.load_model(
         'model_data/murmur_fusion_model.keras', 
-        compile=False,
-        custom_objects={'Functional': tf.keras.Model}
+        compile=False
     )
 
 @st.cache_resource
