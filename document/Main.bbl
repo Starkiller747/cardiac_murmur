@@ -1,0 +1,579 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{davidsen2023diagnostic}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7e8403b053a351ba75dc4ca2931275e1}{%
+           family={Davidsen},
+           familyi={D\bibinitperiod},
+           given={Anders\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {British Medical Journal Publishing Group}%
+      }
+      \strng{namehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{fullhash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{bibnamehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{authorbibnamehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{authornamehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{authorfullhash}{fab05831aadd7f907770662e2169ac5f}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ Open}
+      \field{number}{3}
+      \field{title}{Diagnostic accuracy of heart auscultation for detecting valve disease: a systematic review}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{e068121}
+      \range{pages}{-1}
+    \endentry
+    \entry{lin2017focal}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=08f925fe4692d130a1d7cb7d94483351}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Tsung-Yi},
+           giveni={T\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d87be7c19fa16049347907c9820816c6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Priya},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecd149fdcb3e0503881d49e545744c3d}{%
+           family={Dollár},
+           familyi={D\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
+      \strng{fullhash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \strng{bibnamehash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \strng{authorbibnamehash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \strng{authornamehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
+      \strng{authorfullhash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE International Conference on Computer Vision}
+      \field{title}{Focal loss for dense object detection}
+      \field{year}{2017}
+      \field{pages}{2980\bibrangedash 2988}
+      \range{pages}{9}
+    \endentry
+    \entry{physionet2022}{misc}{}
+      \name{author}{15}{}{%
+        {{un=0,uniquepart=base,hash=6db8b0854360d0f06f7a1138290235d8}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8a48ec47763f5cc5a3a71e67c45ce50}{%
+           family={Renna},
+           familyi={R\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3955cacb140ac3b3fbdcd749f22891d}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b3102d27dab9f558f2500a9f00dcc5d}{%
+           family={Nogueira},
+           familyi={N\bibinitperiod},
+           given={Diogo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2dad2e2864c129b34d11c53cd669dda1}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd3e400a515027af3cd7df8c7709fbb8}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92f40dc0dc9ab649276dd6a2cb785832}{%
+           family={Jorge},
+           familyi={J\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de52356ab06b8f158e01cfb5892cda32}{%
+           family={Mattos},
+           familyi={M\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c130c82bce562e26e7f096ac7255e076}{%
+           family={Hatem},
+           familyi={H\bibinitperiod},
+           given={Thiago},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8937ac69d885c6679a9650ce27515b79}{%
+           family={Tavares},
+           familyi={T\bibinitperiod},
+           given={Tavares},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0744510fb6c38615cc626e01a24784f}{%
+           family={Elola},
+           familyi={E\bibinitperiod},
+           given={Andoni},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03b66b680019f78627314aa093cb0b8f}{%
+           family={Rad},
+           familyi={R\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab4481ca21981ec0bba2be3218964232}{%
+           family={Clifford},
+           familyi={C\bibinitperiod},
+           given={Gari},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=336e07d273394e9cb5ce0bc60dd96457}{%
+           family={Reyna},
+           familyi={R\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cdad07944f2af884719eac40be5a3a4}{%
+           family={Coimbra},
+           familyi={C\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PhysioNet}%
+      }
+      \strng{namehash}{4442eab67708c9f2d9ed17c5618e5a1d}
+      \strng{fullhash}{4ddd861aba021f971076462d914998d7}
+      \strng{bibnamehash}{4ddd861aba021f971076462d914998d7}
+      \strng{authorbibnamehash}{4ddd861aba021f971076462d914998d7}
+      \strng{authornamehash}{4442eab67708c9f2d9ed17c5618e5a1d}
+      \strng{authorfullhash}{4ddd861aba021f971076462d914998d7}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The CirCor DigiScope Phonocardiogram Dataset (version 1.0.3)}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://physionet.org/content/circor-heart-sound/1.0.3/
+      \endverb
+      \verb{url}
+      \verb https://physionet.org/content/circor-heart-sound/1.0.3/
+      \endverb
+    \endentry
+    \entry{reyna2022heart}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=85a180a9c2b2cbbfdb99b3964b51f8de}{%
+           family={Reyna},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{fullhash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{bibnamehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{authorbibnamehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{authornamehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{authorfullhash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Cardiology (CinC)}
+      \field{title}{Heart murmur detection from phonocardiogram recordings: The George B. Moody PhysioNet Challenge 2022}
+      \field{volume}{49}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+    \endentry
+    \entry{tan2019efficientnet}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1e7d6abb8225099acc71f672b9ec336e}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Mingxing},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=841a83a4bb5e622d6e1bde4818879016}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Quoc},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{fullhash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{bibnamehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{authorbibnamehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{authornamehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{authorfullhash}{3c6ed03914c0610af0050fb8a809b599}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Machine Learning (ICML)}
+      \field{title}{EfficientNet: Rethinking model scaling for convolutional neural networks}
+      \field{year}{2019}
+      \field{pages}{6105\bibrangedash 6114}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{davidsen2023diagnostic}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7e8403b053a351ba75dc4ca2931275e1}{%
+           family={Davidsen},
+           familyi={D\bibinitperiod},
+           given={Anders\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {British Medical Journal Publishing Group}%
+      }
+      \strng{namehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{fullhash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{bibnamehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{authorbibnamehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{authornamehash}{fab05831aadd7f907770662e2169ac5f}
+      \strng{authorfullhash}{fab05831aadd7f907770662e2169ac5f}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ Open}
+      \field{number}{3}
+      \field{title}{Diagnostic accuracy of heart auscultation for detecting valve disease: a systematic review}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{e068121}
+      \range{pages}{-1}
+    \endentry
+    \entry{lin2017focal}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=08f925fe4692d130a1d7cb7d94483351}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Tsung-Yi},
+           giveni={T\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d87be7c19fa16049347907c9820816c6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Priya},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecd149fdcb3e0503881d49e545744c3d}{%
+           family={Dollár},
+           familyi={D\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
+      \strng{fullhash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \strng{bibnamehash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \strng{authorbibnamehash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \strng{authornamehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
+      \strng{authorfullhash}{4ccabcfdf9c34f3d9a88fdca5bb95dd5}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE International Conference on Computer Vision}
+      \field{title}{Focal loss for dense object detection}
+      \field{year}{2017}
+      \field{pages}{2980\bibrangedash 2988}
+      \range{pages}{9}
+    \endentry
+    \entry{physionet2022}{misc}{}
+      \name{author}{15}{}{%
+        {{un=0,uniquepart=base,hash=6db8b0854360d0f06f7a1138290235d8}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8a48ec47763f5cc5a3a71e67c45ce50}{%
+           family={Renna},
+           familyi={R\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3955cacb140ac3b3fbdcd749f22891d}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b3102d27dab9f558f2500a9f00dcc5d}{%
+           family={Nogueira},
+           familyi={N\bibinitperiod},
+           given={Diogo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2dad2e2864c129b34d11c53cd669dda1}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd3e400a515027af3cd7df8c7709fbb8}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92f40dc0dc9ab649276dd6a2cb785832}{%
+           family={Jorge},
+           familyi={J\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de52356ab06b8f158e01cfb5892cda32}{%
+           family={Mattos},
+           familyi={M\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c130c82bce562e26e7f096ac7255e076}{%
+           family={Hatem},
+           familyi={H\bibinitperiod},
+           given={Thiago},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8937ac69d885c6679a9650ce27515b79}{%
+           family={Tavares},
+           familyi={T\bibinitperiod},
+           given={Tavares},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0744510fb6c38615cc626e01a24784f}{%
+           family={Elola},
+           familyi={E\bibinitperiod},
+           given={Andoni},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03b66b680019f78627314aa093cb0b8f}{%
+           family={Rad},
+           familyi={R\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab4481ca21981ec0bba2be3218964232}{%
+           family={Clifford},
+           familyi={C\bibinitperiod},
+           given={Gari},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=336e07d273394e9cb5ce0bc60dd96457}{%
+           family={Reyna},
+           familyi={R\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cdad07944f2af884719eac40be5a3a4}{%
+           family={Coimbra},
+           familyi={C\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PhysioNet}%
+      }
+      \strng{namehash}{4442eab67708c9f2d9ed17c5618e5a1d}
+      \strng{fullhash}{4ddd861aba021f971076462d914998d7}
+      \strng{bibnamehash}{4ddd861aba021f971076462d914998d7}
+      \strng{authorbibnamehash}{4ddd861aba021f971076462d914998d7}
+      \strng{authornamehash}{4442eab67708c9f2d9ed17c5618e5a1d}
+      \strng{authorfullhash}{4ddd861aba021f971076462d914998d7}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The CirCor DigiScope Phonocardiogram Dataset (version 1.0.3)}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://physionet.org/content/circor-heart-sound/1.0.3/
+      \endverb
+      \verb{url}
+      \verb https://physionet.org/content/circor-heart-sound/1.0.3/
+      \endverb
+    \endentry
+    \entry{reyna2022heart}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=85a180a9c2b2cbbfdb99b3964b51f8de}{%
+           family={Reyna},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{fullhash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{bibnamehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{authorbibnamehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{authornamehash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \strng{authorfullhash}{32ca620944cb54eaa6c18cc0f28148d8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Cardiology (CinC)}
+      \field{title}{Heart murmur detection from phonocardiogram recordings: The George B. Moody PhysioNet Challenge 2022}
+      \field{volume}{49}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+    \endentry
+    \entry{tan2019efficientnet}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1e7d6abb8225099acc71f672b9ec336e}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Mingxing},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=841a83a4bb5e622d6e1bde4818879016}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Quoc},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{fullhash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{bibnamehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{authorbibnamehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{authornamehash}{3c6ed03914c0610af0050fb8a809b599}
+      \strng{authorfullhash}{3c6ed03914c0610af0050fb8a809b599}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Machine Learning (ICML)}
+      \field{title}{EfficientNet: Rethinking model scaling for convolutional neural networks}
+      \field{year}{2019}
+      \field{pages}{6105\bibrangedash 6114}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

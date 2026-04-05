@@ -1,3 +1,4 @@
+\babel@toc {american}{}\relax 
 \contentsline {section}{\numberline {1}Abstract \& Introduction}{2}{section.1}%
 \contentsline {section}{\numberline {2}Problem Statement}{2}{section.2}%
 \contentsline {section}{\numberline {3}Strategy and Implementation}{2}{section.3}%
@@ -9,9 +10,9 @@
 \contentsline {subsection}{\numberline {4.2}Exploratory Data Analysis (EDA)}{3}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Data Processing and Engineering}{4}{section.5}%
 \contentsline {section}{\numberline {6}Strategy and Multi-Modal Modeling}{5}{section.6}%
-\contentsline {subsection}{\numberline {6.1}The Fusion Architecture}{5}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1}The Fusion Architecture}{6}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Model Selection and Fine-Tuning}{6}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Problem Resolution and Performance Evaluation}{6}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Performance Metrics}{6}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Deployment and Clinical Integration}{7}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Conclusions}{8}{section.8}%
+\contentsline {section}{\numberline {8}Conclusions}{7}{section.8}%
