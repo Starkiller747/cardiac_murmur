@@ -11,6 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 from fpdf import FPDF
 import tempfile
 import os
+os.environ["TD_USE_LEGACY_KERAS"] = "1"
 
 def create_pdf_report(patient_info, overall_verdict, valve_results):
     pdf = FPDF()
