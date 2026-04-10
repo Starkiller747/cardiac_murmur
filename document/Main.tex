@@ -156,6 +156,10 @@ This dataset is predominantly based on children, but also includes neonates, inf
 \section{Strategy and Multi-Modal Modeling}
 The architecture developed goes beyond standard audio analysis by utilizing a Multi-Modal Fusion network.
 
+Earlier versions of this project used a combination of the EfficientNetB0 model and the RestNet model. This achieved about 62\% accuracy but it relied on the .tsv files that are included in the dataset.
+Further revisions to the model led to the RestNet model no longer being needed (as the model was being trained without the .tsv and instead creating its own 3 second windows.) and the creation of the HeartDataGenerator
+to create the Fusion Model as shown below.
+
 \subsection{The Fusion Architecture}
 Because heart sounds are dependent on physiology, the model splits into two processing streams:
 \begin{itemize}

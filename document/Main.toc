@@ -15,4 +15,4 @@
 \contentsline {section}{\numberline {7}Problem Resolution and Performance Evaluation}{6}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Performance Metrics}{6}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Deployment and Clinical Integration}{7}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Conclusions}{7}{section.8}%
+\contentsline {section}{\numberline {8}Conclusions}{8}{section.8}%
