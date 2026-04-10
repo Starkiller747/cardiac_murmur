@@ -160,7 +160,8 @@ st.write("Upload the patient's ECG/Auscultation audio files below.")
 
 st.warning("Make sure to fill the data from the sidebar first before uploading the audio files.")
 
-st.info("For the audio files, make sure they have the valve type in the name like test_AV for the Atrioventricular, TV for the Tricuspid Valve, MV for Mitral Valve and PV for Pulmonary Valve.")
+st.info("For the audio files, make sure they have the valve type in the name like test_AV for the Atrioventricular, test_TV for the Tricuspid Valve, test_MV for Mitral Valve and test_PV for Pulmonary Valve.")
+st.info("The files should be in .wav format for correct usage.")
 
 uploaded_files = st.file_uploader("Choose .wav files", type=['wav'], accept_multiple_files=True)
 
