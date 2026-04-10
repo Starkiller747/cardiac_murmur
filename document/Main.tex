@@ -116,7 +116,7 @@ The dataset was last updated in May 2022 \cite{physionet2022}.
 \subsection{Exploratory Data Analysis (EDA)}
 An exhaustive exploratory analysis revealed several critical factors guiding the modeling strategy:
 \begin{itemize}
-    \item \textbf{Class Distribution:} The dataset exhibits a relatively balanced patient-level distribution (approximately 91 Normal and 98 Abnormal patients), mitigating the need for aggressive synthetic oversampling techniques.
+    \item \textbf{Class Distribution:} The dataset exhibits a relatively balanced patient-level distribution (in the validation data set, there are approximately 91 Normal and 98 Abnormal patients), mitigating the need for aggressive synthetic oversampling techniques.
     \item \textbf{Variable Audio Lengths:} Audio recordings varied significantly in duration (from a few seconds to over a minute), necessitating a standardized windowing approach.
     \item \textbf{Clinical Correlations:} Analysis of the metadata indicated that murmurs are highly localized. A patient might exhibit a loud murmur at the Mitral Valve (MV) while the Aortic Valve (AV) sounds completely normal. This biological reality directly influenced the patient-level aggregation strategy used during evaluation.
 \end{itemize}

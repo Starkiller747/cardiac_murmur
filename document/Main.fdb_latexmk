@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber Main"] 0 "Main.bcf" "Main.bbl" "Main" 1775780022.22718 -1
-  "Main.bcf" 1775780022.17475 133300 e512ef9bc0de3cbd305e55939105d6f1 "pdflatex"
+["biber Main"] 0 "Main.bcf" "Main.bbl" "Main" 1775784402.47211 -1
+  "Main.bcf" 1775784402.42116 133300 e512ef9bc0de3cbd305e55939105d6f1 "pdflatex"
   "references.bib" 1775147128.05813 1699 ba8d09a765ad0d3519c291fd5fb2c6aa ""
   (generated)
   "Main.bbl"
   "Main.blg"
   (rewritten before read)
-["pdflatex"] 1775780020.70327 "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" "Main.pdf" "Main" 1775780022.22744 0
+["pdflatex"] 1775784400.96959 "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" "Main.pdf" "Main" 1775784402.47236 0
   "/etc/texmf/web2c/texmf.cnf" 1771347081.47233 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" 1775780020.5217 15620 2228cc9d0fa89d5b05fabfa0cf9f798c ""
+  "/home/javi/Documents/UNAM/M4/Proyecto/document/Main.tex" 1775784400.78512 15658 781f9704ad03f56129d91e6c25f203fa ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -127,12 +127,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771347095.34065 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771347139 8215375 fce2cac7a29830879dd8528d8efb1914 ""
-  "Main.aux" 1775780022.17275 5140 5f96e2c1b200bcaeb52e30baba3a66f3 "pdflatex"
+  "Main.aux" 1775784402.41816 5140 5f96e2c1b200bcaeb52e30baba3a66f3 "pdflatex"
   "Main.bbl" 1775147667.13122 22394 96829688aa9a8ce1c98ae9122aed6549 "biber Main"
-  "Main.out" 1775780022.17375 3231 e83543b814376dd92d24044722c4e45e "pdflatex"
-  "Main.run.xml" 1775780022.17575 2427 75a71adb04b1034176022ec15b4851a2 "pdflatex"
-  "Main.tex" 1775780020.5217 15620 2228cc9d0fa89d5b05fabfa0cf9f798c ""
-  "Main.toc" 1775780022.17575 1522 c58a5d8e2a59bfcca4d4b583f02cdc58 "pdflatex"
+  "Main.out" 1775784402.42016 3231 e83543b814376dd92d24044722c4e45e "pdflatex"
+  "Main.run.xml" 1775784402.42116 2427 75a71adb04b1034176022ec15b4851a2 "pdflatex"
+  "Main.tex" 1775784400.78512 15658 781f9704ad03f56129d91e6c25f203fa ""
+  "Main.toc" 1775784402.42116 1522 c58a5d8e2a59bfcca4d4b583f02cdc58 "pdflatex"
   "images/LOGO-UNAM-269x300.png" 1764792014.39258 88409 1718a144c2f82cae97fb88ca5594f9c4 ""
   "images/age_distribution.png" 1774726969.23983 17387 dc90c1977c02dd7e28cab8f9b06fab34 ""
   "images/class_distribution.png" 1774726587.85144 72171 fbc7818f1685891d8b0a2bb97c2d387a ""
